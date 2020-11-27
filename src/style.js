@@ -6,7 +6,7 @@ export const View = styled.View`
     flex: 1;    
     align-items: center;
     justify-content: center;
-    background-image: url(${img});
+    /* background-image: url(${img}); */
     background-size: cover;
     background-position: center;
 

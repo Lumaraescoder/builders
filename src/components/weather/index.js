@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginBottom: 40
   },
   title: {
-    fontSize: 48,
+    // fontSize: 48,
     color: '#fff'
   },
   subtitle: {

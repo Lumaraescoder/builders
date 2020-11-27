@@ -1,6 +1,6 @@
 /**
  * @format
- * @lint-ignore-every XPLATJSCOPYRIGHT1
+ * @lint-ignore-every XPLATJSCOPYRIGHT
  */
 
 import 'react-native';
