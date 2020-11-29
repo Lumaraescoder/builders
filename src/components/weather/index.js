@@ -1,22 +1,31 @@
-import React from 'react';
+import React from 'react'
 import * as s from './style.js'
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import PropTypes from 'prop-types'
+import { weatherConditions } from '../../../utils/WeatherConditions'
 
-const Weather = ({weather, temperature}) => {
+const Weather = ({ weather, temperature }) => {
   return (
     <s.view>
       <s.ViewContainer>
-        <MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
-        <s.Texts tempText>{Temperatura}*</s.Texts>
+      <MaterialCommunityIcons
+            size={72}
+            name={weatherConditions[weather].icon}
+            color={'#fff'}
+          />
       </s.ViewContainer>
+        <s.Texts> { temperature }˚</s.Texts>
       <s.ViewBodyContainer>
-        <s.Texts> Muito cedo manhã</s.Texts>
-        <s.Texts subtitle>Volte a codar</s.Texts>
+        <s.Texts>{weatherConditions[weather].title}</s.Texts>
+        <s.TextSub>{weatherConditions[weather].subtitle}</s.TextSub>
       </s.ViewBodyContainer>
     </s.view>
-  );
-};
+  )
+}
 
+Weather.propTypes = {
+  temperature: PropTypes.number.isRequired,
+  weather: PropTypes.string
+}
 
-
-export default Weather;
+export default Weather
