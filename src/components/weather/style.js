@@ -1,11 +1,11 @@
 import styled from 'styled-components/native'
-import { View, Text, Stylesheet } from 'react-native';
-
+import { weatherConditions } from '../../../utils/WeatherConditions'
+import weather from './index'
 
 export const view = styled.View`
-
     flex: 1;
-    background-color: #f7b733;
+    background-color: ${weatherConditions[weather].color};
+
 
 `
 
@@ -26,10 +26,15 @@ export const ViewBodyContainer = styled.View`
 export const Texts = styled.Text`
     font-size: 48px;
     color: #fff;
-    font-size: ${props => props.subtitle ? 48 : 24};
-    font-size: ${props => props.tempText ? 48 : 24};
+    text-align: center;
 
 
 `
+export const TextSub = styled.Text`
+
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
 
 
+`

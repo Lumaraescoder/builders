@@ -2,13 +2,30 @@ import styled from 'styled-components/native'
 // import { StyleSheet, Text, View } from 'react-native';
 import img from './assets/images/Builders.png'
 
-export const View = styled.View`
+export const Views = styled.View`
     flex: 1;    
-    align-items: center;
-    justify-content: center;
-    /* background-image: url(${img}); */
-    background-size: cover;
-    background-position: center;
+    background-color: #fff;
+   
+`
 
+
+export const Loading = styled.View`
+
+    flex: 1;
+    align-items: center;;
+    justify-content: center;
+    background-color: white;
+
+`
+export const LoadingText = styled.Text`
+    font-size: 30px;
+    color: #d4aa35
+
+`
+
+
+
+export const Texts = styled.Text`
+    
 
 `
