@@ -1,11 +1,16 @@
 import styled from 'styled-components/native'
-import { weatherConditions } from '../../../utils/WeatherConditions'
-import weather from './index'
+// import { Button } from 'react-native'
 
-export const view = styled.View`
+export const Views = styled.View`
     flex: 1;
-    background-color: ${weatherConditions[weather].color};
 
+`
+export const ViewsColor = styled(Views)`
+ ${props => props.$style ?? {}}
+
+`
+export const Buttons = styled.Button`
+  
 
 `
 
